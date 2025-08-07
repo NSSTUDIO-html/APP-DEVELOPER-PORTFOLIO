@@ -1,80 +1,33 @@
-# APP-DEVELOPER-PORTFOLIO
-NEW APP DEVELOPER SOON TO BE
+# APP DEVELOPER PORTFOLIO – NAGA SASANK
 
-# 📱 App Developer Portfolio – Naga Sasank
+Welcome to my App Developer Portfolio!
 
-Welcome to my **App Developer Portfolio**!  
-I’m **Naga Sasank**, a passionate and versatile **App Developer** skilled in both **cross-platform** and **native mobile development**. I build clean, modern, and high-performance applications for Android, iOS, and Web using:
-
-🛠️ **Flutter | Dart | React Native | Java | Kotlin | Swift**
+🚀 I specialize in building mobile apps using Flutter, Kotlin, Swift, and React Native.  
+💡 My goal is to craft smart, scalable, and user-friendly mobile experiences.  
+🎯 Passionate about cross-platform development, real-time APIs, AR, and AI integration.
 
 ---
 
-## 🚀 Featured Projects
+## 📦 Projects
 
-### 1. 📝 To-Do App (Flutter + Firebase)
-- **Platform:** Android & iOS (Flutter)
-- **Tech Stack:** Dart, Firebase Auth, Firestore
-- **Features:**
-  - Cloud sync
-  - Dark mode
-  - Real-time task updates
-- 🔗 [GitHub](https://github.com/NSSTUDIO-html/todo-flutter)
+### 1. StarterBox (Beginner)
+> A multi-utility mobile toolkit: To-do, Notes, Calculator, Timer, BMI Calculator, Quiz, Weather, and Flashlight.
 
----
+### 2. SmartSuite (Intermediate)
+> Smart productivity app: Expense Tracker, News API Reader, Firebase Chat, Recipe Search, Translator, Music Player, and Social Feed.
 
-### 2. 💬 Chat App (React Native + Firebase)
-- **Platform:** Android, iOS
-- **Tech Stack:** React Native, Firebase, Firestore
-- **Features:**
-  - Google Sign-In
-  - Real-time chat
-  - Media sharing
-- 🔗 [GitHub](https://github.com/NSSTUDIO-html/chat-app)
+### 3. ProX Hub (Advanced)
+> Enterprise-level super app: E-commerce, Ride Booking, Fitness, Job Finder, Video Streaming, AI Face Filter, Voice Assistant, and AR Drawing Assistant.
 
 ---
 
-### 3. 📓 Offline Notes App (Native Android - Kotlin)
-- **Platform:** Android (Native)
-- **Tech Stack:** Kotlin, Room Database
-- **Features:**
-  - Fully offline
-  - Clean Material UI
-  - Data persistence
-- 🔗 [GitHub](https://github.com/NSSTUDIO-html/notes-kotlin)
+## 🛠 Tech Stack
+- Flutter, Dart, Kotlin, Swift, Java, React Native
+- Firebase, REST APIs, SQLite, MongoDB
+- GitHub, Figma, VS Code
 
 ---
 
-### 4. 📍 Location Tracker (Swift)
-- **Platform:** iOS (Native)
-- **Tech Stack:** Swift, CoreLocation
-- **Features:**
-  - Live GPS tracking
-  - MapKit integration
-  - Save route history
-- 🔗 [GitHub](https://github.com/NSSTUDIO-html/location-tracker-swift)
-
----
-
-## 💡 What I Specialize In
-
-| Skill Category       | Tools / Languages                        |
-|----------------------|------------------------------------------|
-| 🔷 Cross-platform     | Flutter, Dart, React Native              |
-| 🔶 Native Android     | Java, Kotlin                             |
-| 🟣 Native iOS         | Swift, Xcode                             |
-| 🧩 Backend & Auth     | Firebase, Supabase, REST APIs            |
-| 🎨 UI/UX              | Material Design, Cupertino Widgets, Figma |
-| ⚙️ Dev Tools          | Android Studio, VS Code, GitHub, Xcode   |
-
----
-
-## 📂 Folder Structure (Example)
-
-```bash
-App-Developer-Portfolio/
-├── flutter-todo-app/
-├── react-native-chat-app/
-├── native-kotlin-notes-app/
-├── swift-location-tracker/
-└── README.md
+## 🌐 Connect With Me
+- [Portfolio Website](https://nsstudio-html.github.io/APP-DEVELOPER-PORTFOLIO/)
+- [GitHub](https://github.com/NSSTUDIO-html)
