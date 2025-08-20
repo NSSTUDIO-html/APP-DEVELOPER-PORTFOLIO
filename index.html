@@ -6,36 +6,52 @@
   <title>Naga Sasank – App Developer Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-950 text-white font-sans scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-bold">Naga Sasank</h1>
+      <div class="flex gap-6">
+        <a href="#home" class="hover:text-blue-400 transition">Home</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#tech" class="hover:text-blue-400 transition">Tech Stack</a>
+        <a href="#connect" class="hover:text-blue-400 transition">Connect</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Header -->
-  <header class="text-center py-12 px-6">
-    <h1 class="text-4xl font-bold">APP DEVELOPER PORTFOLIO – Naga Sasank 🚀</h1>
-    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-      I specialize in building mobile apps using Flutter, Kotlin, Swift, and React Native. 
-      My goal is to craft smart, scalable, and user-friendly mobile experiences. 
+  <header id="home" class="text-center pt-32 pb-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold">APP DEVELOPER PORTFOLIO – Naga Sasank 🚀</h1>
+    <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+      I specialize in building mobile apps using <span class="text-blue-400">Flutter</span>, 
+      <span class="text-yellow-400">Kotlin</span>, <span class="text-pink-400">Swift</span>, 
+      and <span class="text-green-400">React Native</span>.  
+      My goal is to craft smart, scalable, and user-friendly mobile experiences.  
       Passionate about cross-platform development, real-time APIs, AR, and AI integration.
     </p>
   </header>
 
   <!-- Projects -->
-  <section class="px-6 py-12">
-    <h2 class="text-2xl font-semibold text-center mb-8">📦 Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-bold mb-2">StarterBox (Beginner)</h3>
-        <p class="text-gray-400 text-sm">
+  <section id="projects" class="px-6 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-10">📦 Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">StarterBox (Beginner)</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
           A multi-utility mobile toolkit: To-do, Notes, Calculator, Timer, BMI Calculator, Quiz, Weather, and Flashlight.
         </p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-bold mb-2">SmartSuite (Intermediate)</h3>
-        <p class="text-gray-400 text-sm">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">SmartSuite (Intermediate)</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
           Smart productivity app: Expense Tracker, News API Reader, Firebase Chat, Recipe Search, Translator, Music Player, and Social Feed.
         </p>
       </div>
-      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg">
-        <h3 class="text-xl font-bold mb-2">ProX Hub (Advanced)</h3>
-        <p class="text-gray-400 text-sm">
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">ProX Hub (Advanced)</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
           Enterprise-level super app: E-commerce, Ride Booking, Fitness, Job Finder, Video Streaming, AI Face Filter, Voice Assistant, and AR Drawing Assistant.
         </p>
       </div>
@@ -43,22 +59,29 @@
   </section>
 
   <!-- Tech Stack -->
-  <section class="px-6 py-12 text-center">
-    <h2 class="text-2xl font-semibold mb-4">🛠 Tech Stack</h2>
-    <p class="text-gray-300 max-w-2xl mx-auto">
-      Flutter, Dart, Kotlin, Swift, Java, React Native <br />
+  <section id="tech" class="px-6 py-16 text-center bg-gray-900">
+    <h2 class="text-3xl font-semibold mb-6">🛠 Tech Stack</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+      <span class="text-blue-400">Flutter</span>, Dart, <span class="text-yellow-400">Kotlin</span>, 
+      <span class="text-pink-400">Swift</span>, Java, <span class="text-green-400">React Native</span> <br />
       Firebase, REST APIs, SQLite, MongoDB <br />
       GitHub, Figma, VS Code
     </p>
   </section>
 
   <!-- Connect -->
-  <section class="px-6 py-12 text-center">
-    <h2 class="text-2xl font-semibold mb-4">🌐 Connect With Me</h2>
-    <div class="flex justify-center gap-4">
-      <a href="#" class="px-4 py-2 border border-gray-600 rounded-full hover:bg-gray-800 transition">Portfolio Website</a>
-      <a href="#" class="px-4 py-2 border border-gray-600 rounded-full hover:bg-gray-800 transition">GitHub</a>
+  <section id="connect" class="px-6 py-16 text-center">
+    <h2 class="text-3xl font-semibold mb-6">🌐 Connect With Me</h2>
+    <div class="flex justify-center gap-6">
+      <a href="#" class="px-6 py-2 border border-gray-600 rounded-full hover:bg-blue-500 hover:border-blue-500 transition">Portfolio Website</a>
+      <a href="#" class="px-6 py-2 border border-gray-600 rounded-full hover:bg-green-500 hover:border-green-500 transition">GitHub</a>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900 text-gray-400 text-sm">
+    © 2025 Naga Sasank. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
