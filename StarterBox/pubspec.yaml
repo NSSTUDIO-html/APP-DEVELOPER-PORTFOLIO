@@ -1,0 +1,17 @@
+name: starter_box
+description: A starter utility app for mobile.
+version: 1.0.0+1
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+  shared_preferences: ^2.1.0
+  torch_light: ^0.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
