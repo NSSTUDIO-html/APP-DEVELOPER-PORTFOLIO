@@ -1,97 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naga Sasank – App Developer Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Naga Sasank – App Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+        glow: 'glow 3s ease-in-out infinite alternate',
+        shine: 'shine 2.5s linear infinite',
+      },
+      keyframes: {
+        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+        glow: { '0%': { opacity: '.55' }, '100%': { opacity: '1' } },
+        shine: { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '200% 50%' } },
+      }
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #05060a; }
+  .gradient-text {
+    background: linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6,#facc15,#34d399);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 4s linear infinite;
+  }
+  .glass {
+    background: rgba(15,17,26,.72);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(14px);
+  }
+  .card-glow:hover { box-shadow: 0 0 0 1px rgba(56,189,248,.35), 0 18px 50px -18px rgba(56,189,248,.45); }
+  .aurora {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+  }
+  .aurora span { position:absolute; border-radius:9999px; filter: blur(90px); opacity:.35; }
+  .a1 { width:420px;height:420px;background:#2563eb;top:-120px;left:-100px;animation:float 9s ease-in-out infinite; }
+  .a2 { width:380px;height:380px;background:#9333ea;top:20%;right:-120px;animation:float 11s ease-in-out infinite reverse; }
+  .a3 { width:400px;height:400px;background:#ec4899;bottom:-140px;left:20%;animation:float 13s ease-in-out infinite; }
+  .a4 { width:300px;height:300px;background:#22c55e;bottom:10%;right:15%;opacity:.22;animation:float 10s ease-in-out infinite reverse; }
+  .grid-bg {
+    position: fixed; inset:0; z-index:-2; pointer-events:none;
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at 50% 20%, black, transparent 75%);
+  }
+  ::selection { background:#38bdf8; color:#05060a; }
+</style>
 </head>
-<body class="bg-gray-950 text-white font-sans scroll-smooth">
+<body class="bg-[#05060a] text-white font-sans antialiased">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-xl font-bold">Naga Sasank</h1>
-      <div class="flex gap-6">
-        <a href="#home" class="hover:text-blue-400 transition">Home</a>
-        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-        <a href="#tech" class="hover:text-blue-400 transition">Tech Stack</a>
-        <a href="#connect" class="hover:text-blue-400 transition">Connect</a>
+<div class="grid-bg"></div>
+<div class="aurora">
+  <span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span>
+</div>
+
+<!-- Navbar -->
+<nav class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-6xl mx-auto mt-4 px-4">
+    <div class="glass rounded-2xl px-5 py-3 flex items-center justify-between shadow-xl shadow-black/40">
+      <a href="#home" class="flex items-center gap-3">
+        <span class="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 via-violet-500 to-pink-500 font-black text-lg">N</span>
+        <span class="text-lg font-extrabold tracking-tight">Naga <span class="gradient-text">Sasank</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-1 text-sm font-medium">
+        <a href="#home" class="px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition">Home</a>
+        <a href="#projects" class="px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition">Projects</a>
+        <a href="#tech" class="px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition">Tech Stack</a>
+        <a href="#connect" class="px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition">Connect</a>
       </div>
+      <a href="#connect" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-violet-600 px-4 py-2 text-sm font-semibold hover:opacity-90 transition">
+        Hire Me
+      </a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Header -->
-  <header id="home" class="text-center pt-32 pb-16 px-6">
-    <h1 class="text-4xl md:text-5xl font-bold">APP DEVELOPER PORTFOLIO – Naga Sasank 🚀</h1>
-    <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-      I specialize in building mobile apps using <span class="text-blue-400">Flutter</span>, 
-      <span class="text-yellow-400">Kotlin</span>, <span class="text-pink-400">Swift</span>, 
-      and <span class="text-green-400">React Native</span>.  
-      My goal is to craft smart, scalable, and user-friendly mobile experiences.  
-      Passionate about cross-platform development, real-time APIs, AR, and AI integration.
+<!-- Hero -->
+<header id="home" class="relative pt-36 pb-24 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-semibold text-sky-300">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Available for mobile &amp; AR development
+    </div>
+
+    <h1 class="mt-8 text-4xl sm:text-6xl md:text-7xl font-black leading-[1.05] tracking-tight">
+      APP DEVELOPER<br />
+      <span class="gradient-text">NAGA SASANK</span> 🚀
+    </h1>
+
+    <p class="mt-7 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+      I build modern mobile experiences with
+      <span class="text-sky-400 font-semibold">Flutter</span>,
+      <span class="text-yellow-400 font-semibold">Kotlin</span>,
+      <span class="text-pink-400 font-semibold">Swift</span>, and
+      <span class="text-emerald-400 font-semibold">React Native</span>.
+      Passionate about cross-platform apps, real-time APIs, AR, and AI integration.
     </p>
-  </header>
 
-  <!-- Projects -->
-  <section id="projects" class="px-6 py-16">
-    <h2 class="text-3xl font-semibold text-center mb-10">📦 Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <a href='https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO'>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-3">StarterBox (Beginner)</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">
-          A multi-utility mobile toolkit: To-do, Notes, Calculator, Timer, BMI Calculator, Quiz, Weather, and Flashlight.
-        </p>
-      </div>
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="rounded-2xl bg-gradient-to-r from-sky-500 via-violet-600 to-pink-600 px-7 py-3.5 font-bold shadow-lg shadow-violet-900/40 hover:scale-[1.03] transition">
+        View Projects
       </a>
-      
-      <a href='https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO'>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-3">SmartSuite (Intermediate)</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">
-          Smart productivity app: Expense Tracker, News API Reader, Firebase Chat, Recipe Search, Translator, Music Player, and Social Feed.
-        </p>
-      </div>
-      
+      <a href="https://github.com/NSSTUDIO-html" target="_blank" rel="noopener" class="glass rounded-2xl px-7 py-3.5 font-semibold text-gray-200 hover:text-white hover:border-white/25 transition">
+        GitHub Profile
       </a>
-
-      <a href='https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO'>
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-3">ProX Hub (Advanced)</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">
-          Enterprise-level super app: E-commerce, Ride Booking, Fitness, Job Finder, Video Streaming, AI Face Filter, Voice Assistant, and AR Drawing Assistant.
-        </p>
-      </div>
-      </a>
-      
     </div>
-  </section>
 
-  <!-- Tech Stack -->
-  <section id="tech" class="px-6 py-16 text-center bg-gray-900">
-    <h2 class="text-3xl font-semibold mb-6">🛠 Tech Stack</h2>
-    <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-      <span class="text-blue-400">Flutter</span>, Dart, <span class="text-yellow-400">Kotlin</span>, 
-      <span class="text-pink-400">Swift</span>, Java, <span class="text-green-400">React Native</span> <br />
-      Firebase, REST APIs, SQLite, MongoDB <br />
-      GitHub, Figma, VS Code
-    </p>
-  </section>
-
-  <!-- Connect -->
-  <section id="connect" class="px-6 py-16 text-center">
-    <h2 class="text-3xl font-semibold mb-6">🌐 Connect With Me</h2>
-    <div class="flex justify-center gap-6">
-      <a href="https://ns-portfolio-delta.vercel.app/" class="px-6 py-2 border border-gray-600 rounded-full hover:bg-blue-500 hover:border-blue-500 transition">Portfolio Website</a>
-      <a href="https://github.com/NSSTUDIO-html" class="px-6 py-2 border border-gray-600 rounded-full hover:bg-green-500 hover:border-green-500 transition">GitHub</a>
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+      <div class="glass rounded-2xl p-5 card-glow transition">
+        <p class="text-2xl font-extrabold text-sky-400">Mobile</p>
+        <p class="text-sm text-gray-400 mt-1">App Development</p>
+      </div>
+      <div class="glass rounded-2xl p-5 card-glow transition">
+        <p class="text-2xl font-extrabold text-violet-400">AR</p>
+        <p class="text-sm text-gray-400 mt-1">Web &amp; 3D Experiences</p>
+      </div>
+      <div class="glass rounded-2xl p-5 card-glow transition">
+        <p class="text-2xl font-extrabold text-pink-400">AI</p>
+        <p class="text-sm text-gray-400 mt-1">Chatbots &amp; APIs</p>
+      </div>
+      <div class="glass rounded-2xl p-5 card-glow transition">
+        <p class="text-2xl font-extrabold text-emerald-400">Full-Stack</p>
+        <p class="text-sm text-gray-400 mt-1">Web &amp; Backend</p>
+      </div>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-gray-900 text-gray-400 text-sm">
-    © 2025 Naga Sasank. All Rights Reserved.
-  </footer>
+<!-- Projects -->
+<section id="projects" class="px-6 py-20">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="text-sm font-bold uppercase tracking-[.25em] text-sky-400">Portfolio</p>
+      <h2 class="mt-3 text-3xl md:text-5xl font-black">📦 Featured <span class="gradient-text">Projects</span></h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">A progression from beginner utilities to advanced, feature-rich mobile applications.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-7">
+      <a href="https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO" target="_blank" rel="noopener"
+         class="group glass rounded-3xl p-7 card-glow transition hover:-translate-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-3xl">🧰</span>
+          <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-300 border border-emerald-500/25">Beginner</span>
+        </div>
+        <h3 class="mt-5 text-xl font-bold">StarterBox</h3>
+        <p class="mt-3 text-sm leading-relaxed text-gray-400">
+          A multi-utility mobile toolkit with To-do, Notes, Calculator, Timer, BMI Calculator, Quiz, Weather, and Flashlight.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Flutter</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Utilities</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Mobile UI</span>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-sky-400 group-hover:text-sky-300">Open project →</p>
+      </a>
+
+      <a href="https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO" target="_blank" rel="noopener"
+         class="group glass rounded-3xl p-7 card-glow transition hover:-translate-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-3xl">⚡</span>
+          <span class="rounded-full bg-yellow-500/15 px-3 py-1 text-xs font-bold text-yellow-300 border border-yellow-500/25">Intermediate</span>
+        </div>
+        <h3 class="mt-5 text-xl font-bold">SmartSuite</h3>
+        <p class="mt-3 text-sm leading-relaxed text-gray-400">
+          Smart productivity app featuring Expense Tracker, News API Reader, Firebase Chat, Recipe Search, Translator, Music Player, and Social Feed.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Firebase</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">REST APIs</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Realtime</span>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-violet-400 group-hover:text-violet-300">Open project →</p>
+      </a>
+
+      <a href="https://github.com/NSSTUDIO-html/APP-DEVELOPER-PORTFOLIO" target="_blank" rel="noopener"
+         class="group glass rounded-3xl p-7 card-glow transition hover:-translate-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-3xl">🛰️</span>
+          <span class="rounded-full bg-pink-500/15 px-3 py-1 text-xs font-bold text-pink-300 border border-pink-500/25">Advanced</span>
+        </div>
+        <h3 class="mt-5 text-xl font-bold">ProX Hub</h3>
+        <p class="mt-3 text-sm leading-relaxed text-gray-400">
+          Enterprise-level super app with E-commerce, Ride Booking, Fitness, Job Finder, Video Streaming, AI Face Filter, Voice Assistant, and AR Drawing Assistant.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">AI</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">AR</span>
+          <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-gray-300">Super App</span>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-pink-400 group-hover:text-pink-300">Open project →</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech" class="px-6 py-20">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="text-sm font-bold uppercase tracking-[.25em] text-violet-400">Capabilities</p>
+      <h2 class="mt-3 text-3xl md:text-5xl font-black">🛠️ Tech <span class="gradient-text">Stack</span></h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Tools and technologies I use to design, build, and ship digital products.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass rounded-3xl p-6 card-glow transition hover:-translate-y-1">
+        <h3 class="text-lg font-bold text-sky-400">Mobile</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-xl bg-sky-500/10 border border-sky-500/20 px-3 py-1.5 text-sm text-sky-200">Flutter</span>
+          <span class="rounded-xl bg-sky-500/10 border border-sky-500/20 px-3 py-1.5 text-sm text-sky-200">Dart</span>
+          <span class="rounded-xl bg-yellow-500/10 border border-yellow-500/20 px-3 py-1.5 text-sm text-yellow-200">Kotlin</span>
+          <span class="rounded-xl bg-pink-500/10 border border-pink-500/20 px-3 py-1.5 text-sm text-pink-200">Swift</span>
+          <span class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 text-sm text-emerald-200">React Native</span>
+          <span class="rounded-xl bg-white/5 border border-white/10 px-3 py-1.5 text-sm text-gray-200">Java</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-6 card-glow transition hover:-translate-y-1">
+        <h3 class="text-lg font-bold text-violet-400">Backend &amp; Data</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-xl bg-violet-500/10 border border-violet-500/20 px-3 py-1.5 text-sm text-violet-200">Firebase</span>
+          <span class="rounded-xl bg-violet-500/10 border border-violet-500/20 px-3 py-1.5 text-sm text-violet-200">REST APIs</span>
+          <span class="rounded-xl bg-white/5 border border-white/10 px-3 py-1.5 text-sm text-gray-200">SQLite</span>
+          <span class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 text-sm text-emerald-200">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-6 card-glow transition hover:-translate-y-1">
+        <h3 class="text-lg font-bold text-pink-400">AR &amp; 3D</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-xl bg-pink-500/10 border border-pink-500/20 px-3 py-1.5 text-sm text-pink-200">AR.js</span>
+          <span class="rounded-xl bg-sky-500/10 border border-sky-500/20 px-3 py-1.5 text-sm text-sky-200">Three.js</span>
+          <span class="rounded-xl bg-yellow-500/10 border border-yellow-500/20 px-3 py-1.5 text-sm text-yellow-200">Babylon.js</span>
+          <span class="rounded-xl bg-white/5 border border-white/10 px-3 py-1.5 text-sm text-gray-200">3D Scenes</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-6 card-glow transition hover:-translate-y-1">
+        <h3 class="text-lg font-bold text-emerald-400">Tools</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-xl bg-white/5 border border-white/10 px-3 py-1.5 text-sm text-gray-200">GitHub</span>
+          <span class="rounded-xl bg-pink-500/10 border border-pink-500/20 px-3 py-1.5 text-sm text-pink-200">Figma</span>
+          <span class="rounded-xl bg-sky-500/10 border border-sky-500/20 px-3 py-1.5 text-sm text-sky-200">VS Code</span>
+          <span class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 text-sm text-emerald-200">Django</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Connect -->
+<section id="connect" class="px-6 py-20">
+  <div class="max-w-5xl mx-auto glass rounded-[2rem] p-8 md:p-14 text-center relative overflow-hidden">
+    <div class="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-sky-600/25 blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-16 w-72 h-72 rounded-full bg-pink-600/25 blur-3xl"></div>
+
+    <div class="relative">
+      <p class="text-sm font-bold uppercase tracking-[.25em] text-emerald-400">Let’s build something</p>
+      <h2 class="mt-3 text-3xl md:text-5xl font-black">🌐 Connect <span class="gradient-text">With Me</span></h2>
+      <p class="mt-4 text-gray-300 max-w-xl mx-auto">
+        Explore my live portfolio, check my GitHub projects, or reach out for mobile app, AR, and web development work.
+      </p>
+
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <a href="https://ns-portfolio-delta.vercel.app/" target="_blank" rel="noopener"
+           class="rounded-2xl bg-gradient-to-r from-sky-500 to-violet-600 px-7 py-3.5 font-bold hover:scale-[1.03] transition">
+          Portfolio Website
+        </a>
+        <a href="https://github.com/NSSTUDIO-html" target="_blank" rel="noopener"
+           class="glass rounded-2xl px-7 py-3.5 font-semibold text-gray-200 hover:text-white hover:border-emerald-400/40 transition">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/10 py-8 text-center text-sm text-gray-500">
+  <p>© 2025 Naga Sasank. All Rights Reserved.</p>
+  <p class="mt-2">Built with HTML, Tailwind CSS, and a colorful dark theme.</p>
+</footer>
 
 </body>
 </html>
